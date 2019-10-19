@@ -1,13 +1,13 @@
 const express = require("express")
 const app = express()
-const port = process.env.PORT
+// const port = process.env.PORT
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
-const jwtKey = process.env.JWT_KEY
+// const jwtKey = process.env.JWT_KEY
 const mongodb = require("mongodb")
 const auth = require("./auth")
+const {port,jwtKey}=require("./config")
 app.use(express.json())
-
 app.get("/",(req,res)=>{
     res.send("Hello")
 })
